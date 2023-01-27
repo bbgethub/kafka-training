@@ -1,0 +1,73 @@
+Start Kafka Zookeeper server  -Ubuntu
+---------------------------------
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+Start kafka server  -Ubuntu
+--------------------
+bin/kafka-server-start.sh config/server.properties
+
+Start Kafka Zookeeper server  -Windows
+---------------------------------
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+check the broker id in zookeeper -windows
+-------------------------------------------
+c:/kafka/bin/windows/zookeeper-shell.bat localhost:2181 ls /brokers/ids
+
+Start kafka server  -Windows
+--------------------
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+
+Create topic -Windows
+---------------------
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <topic name>
+
+
+List all topics in Windows
+--------------------------
+.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+
+Write messages in topic in windows
+------------------------------------
+
+.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic <topic name>
+
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092,localhost:9093,localhost9094 --topic Topic1Clusters
+
+READ consumer in windows
+------------------------------------
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Topic1Clusters --from-beginning
+
+Delete the topic in windows
+----------------------------
+./bin/windows/kafka-topics.bat --delete --topic <topic name> --bootstrap-server localhost:9092
+
+
+Create topic -Ubuntu
+---------------------
+bin/kafka-topics.sh --create --topic <topic name> --bootstrap-server localhost:9092
+
+Display usage information -Ubuntu
+------------------------------------
+bin/kafka-topics.sh --describe --topic <topic name> --bootstrap-server localhost:9092
+
+
+WRITE SOME EVENTS INTO THE TOPIC -Ubuntu
+-----------------------------------------
+bin/kafka-console-producer.sh --topic <topic name> --bootstrap-server localhost:9092
+message1
+message2
+message3
+ctrl+c
+
+READ THE EVENTS -Ubuntu
+-----------------
+bin/kafka-console-consumer.sh --topic <topic name> --from-beginning --bootstrap-server localhost:9092
+
+Delete any data of your local Kafka environment -Ubuntu
+-------------------------------------------------
+rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
+
+kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Example1

@@ -1,0 +1,55 @@
+1. Install ubuntu
+
+* got to Microsoft Store -> download ubuntu
+
+*  windows ->features ->click on that window ->search it for windows subsystem for linux,-> click ->re-start
+
+2.open ubuntu and type the below script
+
+sudo apt-get update && sudo apt-get upgrade -y
+
+* Enter/create username
+* create passwrod
+
+3.Install jdk
+
+sudo apt install openjdk-8-jdk -y
+
+4.tar -xzf kafka_2.13-3.3.1.tgz
+5.cd kafka_2.13-3.3.1
+
+6. Start the ZooKeeper service type below command
+$ bin/zookeeper-server-start.sh config/zookeeper.properties
+
+7.Start the Kafka broker service
+$ bin/kafka-server-start.sh config/server.properties
+
+8.Generate a Cluster UUID
+$ KAFKA_CLUSTER_ID="$(bin/kafka-storage.sh random-uuid)"
+
+9.Format Log Directories
+$ bin/kafka-storage.sh format -t $KAFKA_CLUSTER_ID -c config/kraft/server.properties
+
+10.Start the Kafka Server
+$ bin/kafka-server-start.sh config/kraft/server.properties
+
+11.CREATE A TOPIC TO STORE YOUR EVENTS
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+12.WRITE SOME EVENTS INTO THE TOPIC
+$ bin/kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+This is my first event
+This is my second event
+You can stop the producer client with Ctrl-C at any time.
+
+13.READ THE EVENTS
+$ bin/kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+___________________________________________________________________
+
+Create account in
+
+https://www.conduktor.io/kafka/how-to-install-apache-kafka-on-mac-with-homebrew
+
+use this company name for free trial
+www.cannyandcoup.com
+
