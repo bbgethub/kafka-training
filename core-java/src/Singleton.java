@@ -1,6 +1,6 @@
 public class Singleton {
 
-    private static Singleton singleton = new Singleton( );
+    private static Singleton singleton = new Singleton();
 
     /* A private Constructor prevents any other
      * class from instantiating.
@@ -8,12 +8,12 @@ public class Singleton {
     private Singleton() { }
 
     /* Static 'instance' method */
-    public static Singleton getInstance( ) {
+    public static Singleton getInstance() {
         return singleton;
     }
 
     /* Other methods protected by singleton-ness */
-    protected static void demoMethod( ) {
+    protected static void demoMethod() {
         System.out.println("demoMethod for singleton");
     }
 }

@@ -1,0 +1,35 @@
+Step-1 Create a Spring-boot application 
+Step-2 add the spring-kafka dependency in pom.xml 
+Step-3 Define the KafkaSender class to send message to the Kafka topic named as test. @Service
+
+class KafkaSender{
+
+ @Autowired
+
+private KafkaTemplate<String,String> kafkaTemplate;
+ String kafkaTopic="test"; 
+public void send(String message){
+
+kafkaTemplate.send(kafkaTopic,message);
+
+}
+
+} Step-4 Define a Controller which will pass the message and trigger the send message to the Kafka Topic using KafkaSender class. @RestController
+
+@RequestMapping(value="/my-kafka/")
+
+class ApacheKafkaController{ @Autowired
+
+KafkaSender kafkaSender; @GetMapping(value="/producer")
+
+public String producer(@RequestParam("message") String message){
+
+kafkasender.send(message);
+
+return "message sent to the kafka topic test";
+
+}
+
+} 
+
+Step-5 Run String boot application Step-6 Start Apache Zookeeper Step-7 Start Apache Kafka Step-8 Start the consume listening to the test.

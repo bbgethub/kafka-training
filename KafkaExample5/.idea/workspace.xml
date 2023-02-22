@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4180899-5546-4787-b514-567f041ba3a8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../InfyBank/src/main/java/com/genspark/InfyBank/config/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InfyBank/src/main/java/com/genspark/InfyBank/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InfyBank/src/main/java/com/genspark/InfyBank/entity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../InfyBank/src/main/java/com/genspark/InfyBank/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample/src/main/java/com/genspark/KafkaExample/controller/KafkaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample/src/main/java/com/genspark/KafkaExample/service/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample/src/main/java/com/genspark/KafkaExample/service/KafkaSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/Controller/KakfaProducerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/Kafka/KafaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/Kafka/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/Model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/Util/AppConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/config/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaExample3/src/main/java/com/genspark/KafkaExample3/config/UserListenerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/config/kafkaPublisherConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/controller/KafkaProducerConsumerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/kafka/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/kafka/KafkaPublisher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaProducerConsumerApp1/src/main/java/com/genspark/KafkaProducerConsumerApp1/util/AppConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootKafkaExample2/src/main/java/com/genspark/SpringBootKafkaExample2/config/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootKafkaExample2/src/main/java/com/genspark/SpringBootKafkaExample2/controller/KafkaProducerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootKafkaExample2/src/main/java/com/genspark/SpringBootKafkaExample2/kafka/KafkaConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootKafkaExample2/src/main/java/com/genspark/SpringBootKafkaExample2/kafka/KafkaProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBootKafkaExample2/src/main/java/com/genspark/SpringBootKafkaExample2/utils/AppConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-java/src/JunitDemo1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../core-java/src/JunitDemo1Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../producerSteps.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/core-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/core-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/out/production/core-java/RemoveDuplicatesInArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/out/production/core-java/RemoveDuplicatesInArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/out/production/core-java/SingletonDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/out/production/core-java/SingletonDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/src/RemoveDuplicatesInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/RemoveDuplicatesInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/src/Singleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/Singleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../core-java/src/SingletonDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../core-java/src/SingletonDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../kafka commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka commands.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2M6dCnrzXQffAyWiHRxNvIAWDAj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="KafkaProducerWikimedia" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="KafkaProducerWikimedia" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4180899-5546-4787-b514-567f041ba3a8" name="Changes" comment="" />
+      <created>1677091844824</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677091844824</updated>
+    </task>
+    <servers />
+  </component>
+</project>

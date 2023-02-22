@@ -16,13 +16,22 @@ c:/kafka/bin/windows/zookeeper-shell.bat localhost:2181 ls /brokers/ids
 
 Start kafka server  -Windows
 --------------------
-.\bin\windows\kafka-server-start.bat .\config\server.properties
+.\bin\windows\kafka-server-start.bat .\config\server1.properties
 
 
 Create topic -Windows
 ---------------------
-.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic <topic name>
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --replication-factor 3 --partitions 5 --topic Example1
 
+------
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic customerData
+ 
+Create topic with partions and replication factor -windows
+--------------------------------------------------
+
+kafka-topics.bat --create --bootstrap-server localhost:9092  --partitions 2 --replication-factor 1 --topic computer_parts
+
+kafka-topics.bat --create --topic labExercise1 --bootstrap-server localhost:9092 --replication-factor 1 --partitions 5
 
 List all topics in Windows
 --------------------------
@@ -32,13 +41,33 @@ List all topics in Windows
 Write messages in topic in windows
 ------------------------------------
 
-.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic <topic name>
+.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092 --topic Example1
 
-.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092,localhost:9093,localhost9094 --topic Topic1Clusters
+.\bin\windows\kafka-console-producer.bat --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic Example1
+
+kafka-console-producer.bat --topic TopicA --bootstrap-server localhost:9092,localhost:9093,localhost:9094
+---
+
+.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+Write messages in topic with key value -Windows
+-------------------------------------------------
+
+kafka-console-producer.bat --bootstrap-server localhost:9092 --topic computer_parts --property parse.key=true --property key.separator=
+
+kafka-console-producer.bat --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=$" --topic example1ForKey
 
 READ consumer in windows
 ------------------------------------
-.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic Topic1Clusters --from-beginning
+.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic Example1 --from-beginning
+----
+.\bin\windows\kafka-console-consumer.bat --topic Example1 --bootstrap-server localhost:9092 --from-beginning
+
+kafka-console-consumer.bat --topic <topic-name> --from-beginning --bootstrap-server localhost:9092
+
+kafka-console-consumer.bat --topic <topic-name> --from-beginning --bootstrap-server localhost:9092,localhost:9093,localjost:9094
+
+kafka-console-consumer.bat --topic TopicA --from-beginning --bootstrap-server localhost:9092,localhost:9093,localhost:9094
 
 Delete the topic in windows
 ----------------------------
@@ -54,6 +83,14 @@ Display usage information -Ubuntu
 bin/kafka-topics.sh --describe --topic <topic name> --bootstrap-server localhost:9092
 
 
+Display usage information -Windows
+------------------------------------
+bin/kafka-topics.bat --describe --topic Example1 --bootstrap-server localhost:9092,localhost:9093,localhost:9094
+
+.bin/kafka-topics.bat --describe --zookeeper localhost:2181 --topic Example1 
+
+
+
 WRITE SOME EVENTS INTO THE TOPIC -Ubuntu
 -----------------------------------------
 bin/kafka-console-producer.sh --topic <topic name> --bootstrap-server localhost:9092
@@ -61,6 +98,9 @@ message1
 message2
 message3
 ctrl+c
+{"Name":"John","Age":"31","Gender":"Male"}
+{"Name":"Alex","Age":"28","Gender":"Male"}
+{"Name":"Cone","Age":"40","Gender":"Female"}
 
 READ THE EVENTS -Ubuntu
 -----------------
@@ -71,3 +111,33 @@ Delete any data of your local Kafka environment -Ubuntu
 rm -rf /tmp/kafka-logs /tmp/zookeeper /tmp/kraft-combined-logs
 
 kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic Example1
+
+List the number of brokers
+-----------------------------
+zookeeper-shell.bat localhost:2181 ls /brokers/ids
+
+List the number of Topics
+--------------------------
+
+zookeeper-shell.bat localhost:2181 ls /brokers/topics
+
+
+==============================================
+
+PLAINTEXT://127.0.0.1:9092
+=========================
+All groups
+-----------
+kafka-consumer-groups --bootstrap-server localhost:9092 --all-groups -describe
+
+Reset consumer offsets
+-----------------------
+kafka-consumer-groups.bat --bootstrap-server localhost:9092 --group <group name> --reset-offsets --to-earliest --topic <topic name> -execute
+
+List the topics to which the group is subscribed
+---------------------------------------------------
+kafka-consumer-groups --bootstrap-server <kafkahost:port> --group <group_id> --describe
+
+Reset the consumer offset for a topic (preview)
+-------------------------------------------------
+kafka-consumer-groups --bootstrap-server <kafkahost:port> --group <group_id> --topic <topic_name> --reset-offsets --to-earliest

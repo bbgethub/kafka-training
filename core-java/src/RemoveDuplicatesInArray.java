@@ -11,6 +11,11 @@ public class RemoveDuplicatesInArray {
             s.add(a1[i]);
         System.out.println("Using Set");
         System.out.println(s);
+        System.out.println("Converted to Array");
+        int array1[]=s.stream().mapToInt(Number::intValue).toArray();
+        for(int i=0;i<array1.length;i++)
+            System.out.print(array1[i]+" ");
+        System.out.println();
         for(int i=0;i<n;i++)
         for(int j=i+1;j<n;j++)
         {
