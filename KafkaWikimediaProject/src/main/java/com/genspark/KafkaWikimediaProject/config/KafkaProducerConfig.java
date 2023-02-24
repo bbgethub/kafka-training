@@ -1,6 +1,5 @@
-package com.genspark.KafkaProducerConsumerApp1.config;
+package com.genspark.KafkaWikimediaProject.config;
 
-import com.genspark.KafkaProducerConsumerApp1.model.User;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.context.annotation.Bean;
@@ -12,23 +11,20 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @Configuration
-public class kafkaPublisherConfig {
-
+public class KafkaProducerConfig {
     @Bean
-    public ProducerFactory<String, Object> producerFactory(){
-        Map map =new HashMap<String, Object>();
+    public ProducerFactory<String, String> producerFactory(){
+        Map map =new HashMap<String, String>();
         map.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,"localhost:9092");
-        map.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        map.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
-        return new DefaultKafkaProducerFactory<String,Object>(map);
+        map.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        map.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        return new DefaultKafkaProducerFactory<String,String>(map);
     }
 
     @Bean
-    public KafkaTemplate<String, Object> kafkaTemplate(){
+    public KafkaTemplate<String, String> kafkaTemplate(){
         return new KafkaTemplate<>(producerFactory());
     }
-
 }
