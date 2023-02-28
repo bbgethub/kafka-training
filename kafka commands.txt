@@ -24,7 +24,7 @@ Create topic -Windows
 .\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --replication-factor 3 --partitions 5 --topic Example1
 
 ------
-.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic customerData
+.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --topic AnimalTopic
  
 Create topic with partions and replication factor -windows
 --------------------------------------------------
@@ -61,7 +61,7 @@ READ consumer in windows
 ------------------------------------
 .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic Example1 --from-beginning
 ----
-.\bin\windows\kafka-console-consumer.bat --topic Example1 --bootstrap-server localhost:9092 --from-beginning
+.\bin\windows\kafka-console-consumer.bat --topic wikimedia_recentChange --bootstrap-server localhost:9092 --from-beginning
 
 kafka-console-consumer.bat --topic <topic-name> --from-beginning --bootstrap-server localhost:9092
 
@@ -124,7 +124,7 @@ zookeeper-shell.bat localhost:2181 ls /brokers/topics
 
 ==============================================
 
-PLAINTEXT://127.0.0.1:9092
+PLAINTEXT://127.0.0.1:9092 or 127.0.0.1:9002
 =========================
 All groups
 -----------
@@ -141,3 +141,19 @@ kafka-consumer-groups --bootstrap-server <kafkahost:port> --group <group_id> --d
 Reset the consumer offset for a topic (preview)
 -------------------------------------------------
 kafka-consumer-groups --bootstrap-server <kafkahost:port> --group <group_id> --topic <topic_name> --reset-offsets --to-earliest
+
+
+susan connor
+Ronald Barr
+Marie Broadbet
+Jeff Johnson
+
+
+
+
+
+
+
+
+
+

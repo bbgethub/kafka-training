@@ -19,7 +19,7 @@ public class KafkaPublisher {
     private KafkaTemplate<String, Object> kafkaTemplate;
     public void sendMessage(User data) {
         LOGGER.info(String.format("Message sent-> %s", data.toString()));
-        Message<User> message= MessageBuilder.withPayload(data) //Create a new builder for a message with the                                                            given payload
+        Message<User> message= MessageBuilder.withPayload(data) //Create a new builder for a message with the given payload
                 .setHeader(KafkaHeaders.TOPIC, AppConstant.TOPIC_NAME)
                 .build();
         kafkaTemplate.send(message);
