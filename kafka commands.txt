@@ -1,3 +1,11 @@
+Ubuntu
+------
+to check java installed version in ubuntu:
+
+update-alternatives --list java
+
+========================00000000000000000000000000000000000000000000000000000000000000000000000000000
+
 Start Kafka Zookeeper server  -Ubuntu
 ---------------------------------
 bin/zookeeper-server-start.sh config/zookeeper.properties
@@ -61,7 +69,7 @@ READ consumer in windows
 ------------------------------------
 .\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092,localhost:9093,localhost:9094 --topic Example1 --from-beginning
 ----
-.\bin\windows\kafka-console-consumer.bat --topic wikimedia_recentChange --bootstrap-server localhost:9092 --from-beginning
+.\bin\windows\kafka-console-consumer.bat --topic currency_conversion --bootstrap-server localhost:9092 --from-beginning
 
 kafka-console-consumer.bat --topic <topic-name> --from-beginning --bootstrap-server localhost:9092
 
