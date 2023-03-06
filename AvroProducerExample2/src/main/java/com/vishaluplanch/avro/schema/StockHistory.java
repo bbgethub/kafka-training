@@ -14,7 +14,7 @@ import org.apache.avro.message.SchemaStore;
 @org.apache.avro.specific.AvroGenerated
 public class StockHistory extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
   private static final long serialVersionUID = -6638311531864055082L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StockHistory\",\"namespace\":\"com.vishaluplanch.avro.schema\",\"fields\":[{\"name\":\"tradeId\",\"type\":\"int\",\"default\":-1},{\"name\":\"tradeQuantity\",\"type\":\"int\",\"default\":-1},{\"name\":\"tradeMarket\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"stockName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tradeType\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"price\",\"type\":\"float\",\"default\":-100.0},{\"name\":\"amount\",\"type\":\"float\",\"default\":-100.0}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"StockHistoryModel\",\"namespace\":\"com.vishaluplanch.avro.schema\",\"fields\":[{\"name\":\"tradeId\",\"type\":\"int\",\"default\":-1},{\"name\":\"tradeQuantity\",\"type\":\"int\",\"default\":-1},{\"name\":\"tradeMarket\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"stockName\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"tradeType\",\"type\":[\"null\",\"string\"],\"default\":null},{\"name\":\"price\",\"type\":\"float\",\"default\":-100.0},{\"name\":\"amount\",\"type\":\"float\",\"default\":-100.0}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -40,12 +40,12 @@ public class StockHistory extends org.apache.avro.specific.SpecificRecordBase im
     return new BinaryMessageDecoder<StockHistory>(MODEL$, SCHEMA$, resolver);
   }
 
-  /** Serializes this StockHistory to a ByteBuffer. */
+  /** Serializes this StockHistoryModel to a ByteBuffer. */
   public java.nio.ByteBuffer toByteBuffer() throws java.io.IOException {
     return ENCODER.encode(this);
   }
 
-  /** Deserializes a StockHistory from a ByteBuffer. */
+  /** Deserializes a StockHistoryModel from a ByteBuffer. */
   public static StockHistory fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
@@ -229,33 +229,33 @@ public class StockHistory extends org.apache.avro.specific.SpecificRecordBase im
   }
 
   /**
-   * Creates a new StockHistory RecordBuilder.
-   * @return A new StockHistory RecordBuilder
+   * Creates a new StockHistoryModel RecordBuilder.
+   * @return A new StockHistoryModel RecordBuilder
    */
   public static com.vishaluplanch.avro.schema.StockHistory.Builder newBuilder() {
     return new com.vishaluplanch.avro.schema.StockHistory.Builder();
   }
 
   /**
-   * Creates a new StockHistory RecordBuilder by copying an existing Builder.
+   * Creates a new StockHistoryModel RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new StockHistory RecordBuilder
+   * @return A new StockHistoryModel RecordBuilder
    */
   public static com.vishaluplanch.avro.schema.StockHistory.Builder newBuilder(com.vishaluplanch.avro.schema.StockHistory.Builder other) {
     return new com.vishaluplanch.avro.schema.StockHistory.Builder(other);
   }
 
   /**
-   * Creates a new StockHistory RecordBuilder by copying an existing StockHistory instance.
+   * Creates a new StockHistoryModel RecordBuilder by copying an existing StockHistoryModel instance.
    * @param other The existing instance to copy.
-   * @return A new StockHistory RecordBuilder
+   * @return A new StockHistoryModel RecordBuilder
    */
   public static com.vishaluplanch.avro.schema.StockHistory.Builder newBuilder(com.vishaluplanch.avro.schema.StockHistory other) {
     return new com.vishaluplanch.avro.schema.StockHistory.Builder(other);
   }
 
   /**
-   * RecordBuilder for StockHistory instances.
+   * RecordBuilder for StockHistoryModel instances.
    */
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<StockHistory>
     implements org.apache.avro.data.RecordBuilder<StockHistory> {
@@ -310,7 +310,7 @@ public class StockHistory extends org.apache.avro.specific.SpecificRecordBase im
     }
 
     /**
-     * Creates a Builder by copying an existing StockHistory instance
+     * Creates a Builder by copying an existing StockHistoryModel instance
      * @param other The existing instance to copy.
      */
     private Builder(com.vishaluplanch.avro.schema.StockHistory other) {

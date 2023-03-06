@@ -4,7 +4,25 @@ to check java installed version in ubuntu:
 
 update-alternatives --list java
 
-========================00000000000000000000000000000000000000000000000000000000000000000000000000000
+start kafka server alone in confluent
+-------------------------------------
+confluent local services kafka start
+
+start all services in confluent
+------------------------------------
+confluent local services start
+
+stop all service in confluent
+-------------------------------
+confluent local services stop
+
+To start just ZooKeeper, Kafka and Schema Registry run
+------------------------------------------------------------
+confluent start schema-registry
+
+
+
+========================
 
 Start Kafka Zookeeper server  -Ubuntu
 ---------------------------------

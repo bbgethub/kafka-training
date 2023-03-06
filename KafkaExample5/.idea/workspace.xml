@@ -5,15 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4180899-5546-4787-b514-567f041ba3a8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/src/main/java/org/example/kafka/KafkaConsumerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/src/main/java/org/example/kafka/KafkaProducerDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/src/main/java/org/example/model/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/src/main/java/org/example/utils/CustomDeserializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../KafkaCustomSerializerExample/src/main/java/org/example/utils/CustomProducerSerializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../animalAPI/src/main/java/com/genspark/animalAPI/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../animalAPI/src/main/java/com/genspark/animalAPI/model/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../animalAPI/src/main/java/com/genspark/animalAPI/service/AnimalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assesment/MainProject/src/main/java/com/genspark/MainProject/DTO/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assesment/MainProject/src/main/java/com/genspark/MainProject/DTO/OrderEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/genspark/AvroProducerExample2/controller/SpringAvroRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/genspark/AvroProducerExample2/service/SpringAvroProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaAvroProducer/src/main/java/com/genspark/KafkaAvroProducer/controller/SpringAvroRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaAvroProducer/src/main/java/com/genspark/KafkaAvroProducer/model/StockHistoryModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaAvroProducer/src/main/java/com/genspark/KafkaAvroProducer/service/SpringAvroProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../KafkaAvroProducer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/genspark/AvroProducerExample2/model/StockHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/genspark/AvroProducerExample2/model/StockHistoryModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/vishaluplanch/avro/schema/StockHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../AvroProducerExample2/src/main/java/com/vishaluplanch/avro/schema/StockHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AvroProducerExample2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../AvroProducerExample2/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../kafka commands.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../kafka commands.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +46,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/genspark/kafka-training/KafkaExample5"
+    "last_opened_file_path": "C:/genspark/kafka-training/KafkaExample"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

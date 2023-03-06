@@ -2,14 +2,14 @@ server:
   port: 9081
 spring:
   kafka:
-    bootstrap-servers: "localhost:9092"
+    bootstrap-servers: "PLAINTEXT://172.25.64.1:9092"
   producer:
     keySerializer: "org.apache.kafka.common.serialization.StringSerializer"
     valueSerializer: "io.confluent.kafka.serializers.KafkaAvroSerializer"
     properties:
       schema:
         registry:
-          url: "localhost:8081"
+          url: "http://localhost:8081"
   consumer:
     group-id: "spring-boot-avro-consumer-id"
     keyDeserializer: "org.apache.kafka.common.serialization.StringDeserializer"
@@ -18,7 +18,7 @@ spring:
     properties:
       schema:
         registry:
-          url: "localhost:8081"
+          url: "http://localhost:8081"
       specific:
         avro:
           reader: "true"

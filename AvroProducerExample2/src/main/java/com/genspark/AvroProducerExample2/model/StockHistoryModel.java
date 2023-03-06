@@ -1,6 +1,6 @@
 package com.genspark.AvroProducerExample2.model;
 
-public class StockHistory {
+public class StockHistoryModel {
     private int tradeId;
     private int tradeQuantity;
     private String tradeMarket;
